@@ -65,7 +65,28 @@ export default function LoadingScreen() {
           </div>
 
           {/* Middle Logs */}
-          <div className="max-w-xl self-start space-y-3 mt-16 md:mt-24">
+          <div className="max-w-xl self-start space-y-4 mt-16 md:mt-24">
+            {/* Cool Loading Logo */}
+            <div className="relative w-14 h-14 flex items-center justify-center mb-2">
+              <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink rounded-xl opacity-50 blur-[6px] animate-pulse" />
+              <div className="relative w-12 h-12 bg-[#02000c] border border-white/10 rounded-xl flex items-center justify-center z-10">
+                <svg viewBox="0 0 100 100" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 15 L85 35 V75 L50 95 L15 75 V35 Z" stroke="url(#load-logo-grad)" strokeWidth="6" strokeLinejoin="round" />
+                  <path d="M35 68 L50 32 L65 68" stroke="url(#load-logo-grad)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M42 54 H58" stroke="url(#load-logo-grad-2)" strokeWidth="6" strokeLinecap="round" />
+                  <defs>
+                    <linearGradient id="load-logo-grad" x1="0" y1="0" x2="100" y2="100">
+                      <stop offset="0%" stopColor="#00f2fe" />
+                      <stop offset="100%" stopColor="#9b51e0" />
+                    </linearGradient>
+                    <linearGradient id="load-logo-grad-2" x1="100" y1="0" x2="0" y2="100">
+                      <stop offset="0%" stopColor="#00f2fe" />
+                      <stop offset="100%" stopColor="#f355da" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
             <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink tracking-widest mb-6 font-display">
               AZMI ZEIN
             </h1>

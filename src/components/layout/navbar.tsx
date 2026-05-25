@@ -76,9 +76,33 @@ export default function Navbar() {
           {/* Logo */}
           <div 
             onClick={() => scrollTo("hero")}
-            className="cursor-pointer font-display font-bold text-lg md:text-xl bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-neon-purple tracking-widest"
+            className="cursor-pointer flex items-center gap-2.5 group"
           >
-            M. AZMI ZEIN
+            <div className="relative w-8 h-8 flex items-center justify-center">
+              {/* Outer spinning aura */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-neon-blue via-neon-purple to-neon-pink rounded-lg opacity-40 blur-[4px] group-hover:opacity-75 transition-opacity duration-300" />
+              {/* Inner crisp logo container */}
+              <div className="relative w-7 h-7 bg-bg-dark border border-white/10 rounded-lg flex items-center justify-center overflow-hidden z-10 group-hover:border-neon-blue/30 transition-colors duration-300">
+                <svg viewBox="0 0 100 100" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 15 L85 35 V75 L50 95 L15 75 V35 Z" stroke="url(#nav-logo-grad)" strokeWidth="6" strokeLinejoin="round" />
+                  <path d="M35 68 L50 32 L65 68" stroke="url(#nav-logo-grad)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M42 54 H58" stroke="url(#nav-logo-grad-2)" strokeWidth="6" strokeLinecap="round" />
+                  <defs>
+                    <linearGradient id="nav-logo-grad" x1="0" y1="0" x2="100" y2="100">
+                      <stop offset="0%" stopColor="#00f2fe" />
+                      <stop offset="100%" stopColor="#9b51e0" />
+                    </linearGradient>
+                    <linearGradient id="nav-logo-grad-2" x1="100" y1="0" x2="0" y2="100">
+                      <stop offset="0%" stopColor="#00f2fe" />
+                      <stop offset="100%" stopColor="#f355da" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <span className="font-display font-bold text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-neon-purple tracking-widest transition-all duration-300 group-hover:text-white">
+              M. AZMI ZEIN
+            </span>
           </div>
 
           {/* Nav Items Capsules */}
