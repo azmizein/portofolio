@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "Premium cinematic portfolio of Muhammad Azmi Zein, a Fullstack Developer specializing in JavaScript, React, Node.js, Nest.js, Express, Python, FastAPI, and conversational AI integrations.",
   keywords: ["Muhammad Azmi Zein", "Fullstack Developer", "Software Engineer", "AI speech to text", "Whisper Large V3", "React Nest.js", "PT Niagamas Lestari Gemilang", "Tangerang Banten"],
   authors: [{ name: "Muhammad Azmi Zein" }],
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
